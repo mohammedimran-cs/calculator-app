@@ -2,7 +2,7 @@ const num = ["AC","DE",".","/","7","8","9","*","4","5","6","-","1","2","3","+","
 
 let count = 0;
 let result = "";
-let checkClear= false;
+// let checkClear= false;
 $("#btn-con .btn").each(function(){
     $(this).data("value",num[count]);
     // console.log($(this).data("value"));
@@ -36,7 +36,7 @@ $(".btn").on("click",function(){
     case "=" :  {
         if (result !== "") {
             try {
-                checkClear = true;
+                // checkClear = true;
                 let calculate = new Function('return ' + result);
                 let res = calculate();
                 result = "" + res;
@@ -62,10 +62,10 @@ $(".btn").on("click",function(){
         let lastLetter = result[result.length - 1];
         let arr = result.split('');
         if (!['+', '-', '*', '/', '.'].includes(lastLetter) && result !== "" ) {
-            if(checkClear){
-                result = "";
-                checkClear = false;
-            }
+            // if(checkClear){
+            //     result = "";
+            //     checkClear = false;
+            // }
             let charArray = result.split('');
             console.log(charArray);
             charArray.push(dataValue);
@@ -77,10 +77,10 @@ $(".btn").on("click",function(){
         break;
 
     default : {
-        if(checkClear){
-            result = "";
-            checkClear = false;
-        }
+        // if(checkClear){
+        //     result = "";
+        //     checkClear = false;
+        // }
             let charArray = result.split('');
             console.log(charArray);
             charArray.push(dataValue);
@@ -96,6 +96,3 @@ $(".btn").on("click",function(){
 // setInterval(()=> {
 // $("#line-blink").fadeOut(100).fadeIn(100);
 // },800);
-
-
-
