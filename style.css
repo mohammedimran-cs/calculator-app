@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1d3849;
+}
+
+body {
+    height: 100vh;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculator-app {
+    max-width: 350px;
+    background-color: #205b7a;
+    padding: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* #num-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+#calculator-app input {
+    font-size: 2.2rem;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: .5em 0;
+    padding-right: 5px;
+    outline: none;
+    border: none;
+    text-align: right;
+    color: rgb(0, 0, 0);
+}
+#calculator-app input::placeholder {
+    color: rgb(0, 0, 0);
+  }
+
+ /* input::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: red;
+} */
+
+/* #line-blink {
+    width: 0.5%;
+    height: 2.2rem;
+    background-color: #a2bbcf;
+} */
+
+#btn-con{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    row-gap: 12px;
+    column-gap: 12px;
+}
+
+.btn {
+    background-color: #a2bbcf;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 1em;
+    user-select: none;
+    /* box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3); */
+}
+
+#col-join {
+   grid-column: span 2;
+}
+
+@media(max-width:375px){
+    #calculator-app {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #btn-con{
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        padding: .8em;
+
+        /* box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3); */
+    }
+
+    #line-blink {
+        height: 1.8rem;
+    }
+
+    /* #calculator-app input {
+        font-size: 1.8rem;
+    } */
+
+}
